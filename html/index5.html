@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pneumonia Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}"> <!-- Assuming you have a CSS file -->
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/Liver Disease">Liver Disease</a></li>
+            <li><a href="/Heart Disease">Heart Disease</a></li>
+            <li><a href="/Diabetes">Diabetes</a></li>
+            <li><a href="/BTCMRI">BTCMRI</a></li>
+            <li><a href="/pneumonia">Pneumonia</a></li>
+        </ul>
+    </nav>
+    <form action="/predict4" method="post" enctype="multipart/form-data">
+        <div class="wrapper">
+            <div class="title">
+                <h1 style="color: wheat;">Pneumonia Detection</h1>
+            </div>
+            <div class="form">
+                <div class="input_field">
+                    <label>Upload Chest X-ray Image</label>
+                    <input type="file" name="file" accept="image/*">
+                </div>
+                <div class="input_field">
+                    <input type="submit" style="color:black; background: skyblue;" id="submit" value="SUBMIT">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div>
+        <center>
+            <h2 style="color: white; margin-bottom:10px;">
+                {{ prediction_text }}
+            </h2>
+        </center>
+    </div>
+</body>
+
+</html>

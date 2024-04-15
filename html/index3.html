@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Diabetes Prediction</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/Liver Disease">Liver Disease</a></li>
+            <li><a href="/Heart Disease">Heart Disease</a></li>
+            <li><a href="/Diabetes">Diabetes</a></li>
+            <li><a href="/BTCMRI">BTCMRI</a></li>
+            <li><a href="/pneumonia">Pneumonia</a></li>
+        </ul>
+    </nav>
+    <form action="{{ url_for('predict1')}}" method="post">
+        <div class="wrapper">
+            <div class="title">
+                <h1 style="color: wheat;">Diabetes Prediction</h1>
+            </div>
+            <div class="form">
+                <div class="input_field">
+                    <label>Preg</label>
+                    <input type="number" id="pregnant" name="pregnant" class="input_text">
+                    <br /> <i style="font-size: 10px; color: white;">(Pregnant: 0-8)</i>
+                </div>
+                <div class="input_field">
+                    <label>Glu. level</label>
+                    <input type="number" min="0" max="500" name="Glucose" id="Glucose" class="input_text">
+                    <br /> <i style="font-size: 10px; color: white;">(Glucose : (0-150 mg/dL))</i>
+                </div>
+                <div class="input_field">
+                    <label>Dias. BP</label>
+                    <input type="number" name="Dia. BP" id="Dia. BP" min="0" max="200" class="input_text">
+                    <br /> <i style="font-size: 10px; color: white;">(Enter the value (0-200 mg/dL))</i>
+                </div>
+                <div class="input_field">
+                    <label>Skin Thickness</label>
+                    <input name="Skin Thickness" id="Skin Thickness" type="number" min="0"  class="input_text">
+                    <br /> <i style="font-size: 10px; color: white;">(Enter Non-Decimal Value : (mm))</i>
+                </div>
+                <div class="input_field">
+                    <label>Insulin Level</label>
+                    <input name="Insulin Level" id="Insulin Level" type="number" min="0"  class="input_text">
+                    <br /> <i style="font-size: 10px; color: white;">(Enter Non-Decimal Value : (IU/mL))</i>
+                </div>
+                <div class="input_field">
+                    <label>BMI</label>
+                    <input pattern="^\d*(\.\d{0,2})?$"  name="BMI" id="BMI" class="input_text">
+                    <br /> <i style="font-size: 10px; color: white;">(Enter the Non-Decimal Value: (kg/m^2))</i>
+                </div>
+                <div class="input_field">
+                    <label>DPF</label>
+                    <input pattern="^\d*(\.\d{0,3})?$" name="DPF"  id="DPF" class="input_text">
+                    <br /> <i style="font-size: 10px; color: white;">(Enter Decimal value : )</i>
+                </div>
+                <div class="input_field">
+                    <label>AGE</label>
+                    <input name="AGE" id="AGE" pattern="^\d*(\.\d{0,2})?$" min="0" step="1" class="input_text">
+                    <br /> <i style="font-size: 10px; color: white;">(Enter Non-Decimal Value :)</i>
+                </div>
+                <div class="input_field">
+                    <input type="submit" style="color:black; background: skyblue;" id="submit" value="SUBMIT">
+                </div>
+                <div>
+                    <center>
+                        <h2 style="color: white; margin-bottom:10px;">
+                            {{prediction_text}}
+                        </h2>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+    </div>
+    </form>
+</body>
+
+</html>

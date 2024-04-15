@@ -1,0 +1,106 @@
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    margin: 0;
+    
+    padding: 0;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+body {
+    background: url("https://cdn.pixabay.com/photo/2016/08/10/20/26/stethoscope-1584223_1280.jpg") no-repeat top center;
+    /* padding: 0 10px; */
+    background-size: cover;
+}
+/* Navbar styling */
+nav {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background color */
+    padding: 19px 19px; /* Padding for the navbar */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px; /* Spacing between navbar items */
+}
+
+nav ul li a {
+    color: wheat; /* Text color */
+    text-decoration: none;
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Font weight */
+}
+
+nav ul li a:hover {
+    color: #fff; /* Text color on hover */
+}
+
+.wrapper {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #555;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.title h1 {
+    color: wheat;
+    text-align: center;
+    margin: 0;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.input_field {
+    margin-bottom: 20px;
+}
+
+.input_field label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.input_field input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.input_field input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: skyblue;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.input_field input[type="submit"]:hover {
+    background-color: #99ccff;
+}
+
+div h2 {
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
